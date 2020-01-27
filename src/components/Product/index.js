@@ -17,6 +17,10 @@ export default function Product({ data }) {
     if (tempo === 0) {
       clearTimeout(timeout);
     }
+
+    return () => {
+      clearTimeout(timeout);
+    };
   }, [tempo, timeout]);
 
   const handleLance = () => {
